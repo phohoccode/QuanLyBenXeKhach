@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,54 +18,61 @@ namespace QuanLyBaoCao
             InitializeComponent();
         }
 
-        private void dgvDSBaoCao_CellContentClick(object sender, DataGridViewCellEventArgs e)
+
+        private void LoadData()
         {
-            if (e.RowIndex >= 0)
+            Connection conn = new Connection();
+            bool check_conn = conn.openConn();
+
+            if (!check_conn)
             {
-                DataGridViewRow row = dgvDSBaoCao.Rows[e.RowIndex];
-
-                string maBaoCao = row.Cells["Mã báo cáo"].Value.ToString();
-                string nguoiLapBaoCao = row.Cells["Người lập báo cáo"].Value.ToString();
-                DateTime thoiGianLap = (DateTime)row.Cells["Thời gian lập báo cáo"].Value;
-                decimal tongDoanhThu = (decimal)row.Cells["Tổng doanh thu"].Value;
-                decimal chiPhiVanHanh = (decimal)row.Cells["Chi phí vận hành"].Value;
-                decimal loiNhuan = (decimal)row.Cells["Lợi nhuận"].Value;
-
-                // Hiển thị thông tin
-                MessageBox.Show(
-                                $"- Mã báo cáo: {maBaoCao}\n" +
-                                $"- Người lập báo cáo: {nguoiLapBaoCao}\n" +
-                                $"- Thời gian lập báo cáo: {thoiGianLap.ToShortDateString()}\n" +
-                                $"- Tổng doanh thu: {tongDoanhThu}\n" +
-                                $"- Chi phí vận hành: {chiPhiVanHanh}\n" +
-                                $"- Lợi nhuận: {loiNhuan}");
+                MessageBox.Show("Kết nối Sql thất bại!");
+                conn.closeConn();
+                return;
             }
+
+            string Sql =
+                "SELECT " +
+                "BAOCAO.MaBaoCao," +
+                "BAOCAO.TenBaoCao," +
+                "BAOCAO.GhiChu," +
+                "NGUOIDUNG.TenDangNhap AS NguoiLapBaoCao," +
+                "BAOCAO.SoVeBanDuoc, BAOCAO.TongDoanhThu," +
+                "BAOCAO.ThoiGianLap " +
+                "FROM BAOCAO " +
+                "JOIN NGUOIDUNG ON BAOCAO.MaNguoiDung = NGUOIDUNG.MaNguoiDung;";
+            SqlDataReader drd = conn.executeSQL(Sql);
+
+            DataTable dataTable = new DataTable();
+            dataTable.Columns.Add("Mã báo cáo", typeof(int));
+            dataTable.Columns.Add("Tên báo cáo", typeof(string));
+            dataTable.Columns.Add("Người lập báo cáo", typeof(string));
+            dataTable.Columns.Add("Số vé bán được", typeof(decimal));
+            dataTable.Columns.Add("Tổng doanh thu", typeof(decimal));
+            dataTable.Columns.Add("Thời gian lập báo cáo", typeof(DateTime));
+            dataTable.Columns.Add("Ghi chú", typeof(string));
+
+
+            while (drd.Read())
+            {
+                int maBaoCao = (int)drd["MaBaoCao"];
+                string tenBaoCao = drd["TenBaoCao"].ToString();
+                string ghiChu = drd["GhiChu"].ToString();
+                string nguoiLapBaoCao = drd["NguoiLapBaoCao"].ToString();
+                int soVeBanDuoc = (int)drd["SoVeBanDuoc"];
+                decimal tongDoanhthu = (decimal)drd["TongDoanhThu"];
+                DateTime thoiGianLap = (DateTime)drd["ThoiGianLap"];
+                dataTable.Rows.Add(maBaoCao, tenBaoCao, nguoiLapBaoCao, soVeBanDuoc, tongDoanhthu, thoiGianLap, ghiChu);
+            }
+            dgvDSBaoCao.DataSource = dataTable;
+
+            drd.Close();
+            conn.closeConn();
         }
 
         private void FrmDanhSachBaoCao_Load(object sender, EventArgs e)
         {
-            DataTable dataTable = new DataTable();
-            dataTable.Columns.Add("Mã báo cáo", typeof(string));
-            dataTable.Columns.Add("Người lập báo cáo", typeof(string));
-            dataTable.Columns.Add("Thời gian lập báo cáo", typeof(DateTime));
-            dataTable.Columns.Add("Tổng doanh thu", typeof(decimal));
-            dataTable.Columns.Add("Chi phí vận hành", typeof(decimal));
-            dataTable.Columns.Add("Lợi nhuận", typeof(decimal));
-
-            // Tạo dữ liệu giả và thêm vào DataTable
-            for (int i = 1; i <= 10; i++)
-            {
-                string reportID = "BC" + i.ToString("D3"); // Mã báo cáo giả
-                string reportUser = $"User {i}"; // Người lập báo cáo giả
-                DateTime reportDate = DateTime.Now.AddDays(-i); // Thời gian lập báo cáo giả
-                decimal totalRevenue = new Random().Next(1000000, 5000000); // Tổng doanh thu giả
-                decimal operationCost = new Random().Next(500000, 2000000); // Chi phí vận hành giả
-                decimal profit = totalRevenue - operationCost; // Lợi nhuận giả
-
-                // Thêm dòng vào DataTable
-                dataTable.Rows.Add(reportID, reportUser, reportDate, totalRevenue, operationCost, profit);
-            }
-            dgvDSBaoCao.DataSource = dataTable;
+            LoadData();
         }
 
 
@@ -73,7 +81,7 @@ namespace QuanLyBaoCao
 
         }
 
-    
+
 
         private void btnLamMoi_Click(object sender, EventArgs e)
         {
@@ -85,10 +93,7 @@ namespace QuanLyBaoCao
 
         }
 
-        private void btnDatLai_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
@@ -99,5 +104,7 @@ namespace QuanLyBaoCao
         {
 
         }
+
+
     }
 }

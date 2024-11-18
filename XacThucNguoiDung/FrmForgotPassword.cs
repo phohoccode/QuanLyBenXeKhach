@@ -124,7 +124,7 @@ namespace XacThucNguoiDung
             }
 
             string Sql_FindEmail =
-                "Select * from Nguoidung" + " Where email = " + "'" + email + "'";
+                "Select * from NGUOIDUNG" + " Where email = " + "'" + email + "'";
 
             SqlDataReader drd = conn.executeSQL(Sql_FindEmail);
 
@@ -137,19 +137,17 @@ namespace XacThucNguoiDung
                 return;
             }
 
-            string userId = "";
-            string verifyId = GenerateUUID();
+            int userId = 0;
 
             while (drd.Read())
             {
-                userId = drd["MaNguoiDung"].ToString();
+                userId = Convert.ToInt32(drd["MaNguoiDung"].ToString());
             }
 
             drd.Close();
 
             string Sql_InsetTokenToSql =
-                "Insert into XacMinhTaiKhoan (MaXacMinh, MaNguoiDung,MaToken, LoaiXacMinh) values (" +
-                "'" + verifyId + "'" + "," +
+                "Insert into XACMINHTAIKHOAN (MaNguoiDung,MaToken, LoaiXacMinh) values (" +
                 "'" + userId + "'" + "," +
                 "'" + token + "'" + "," +
                 "'Forgot-Password')";

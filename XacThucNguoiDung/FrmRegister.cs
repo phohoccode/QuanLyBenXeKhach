@@ -75,7 +75,6 @@ namespace XacThucNguoiDung
             string email = txtEmail.Text.Trim();
             string username = txtUsername.Text.Trim();
             string password = txtPassword.Text.Trim();
-            string userId = GenerateUUID();
 
 
             if (!checkValidEmail(email))
@@ -97,7 +96,7 @@ namespace XacThucNguoiDung
             }
 
             string Sql_FindEmail =
-                "Select email from Nguoidung" + " Where email = " + "'" + email + "'";
+                "Select email from NGUOIDUNG" + " Where email = " + "'" + email + "'";
 
             SqlDataReader drd = conn.executeSQL(Sql_FindEmail);
 
@@ -114,8 +113,7 @@ namespace XacThucNguoiDung
 
 
             string Sql_Register =
-                "Insert into Nguoidung (MaNguoiDung, TenDangNhap, Email, Matkhau) values ('" +
-                userId + "'" + "," + "'" +
+                "Insert into NGUOIDUNG (TenDangNhap, Email, Matkhau) values ('" +
                 username + "'" + "," + "'" +
                 email + "'" + "," + "'" +
                 password + "'" + ")";

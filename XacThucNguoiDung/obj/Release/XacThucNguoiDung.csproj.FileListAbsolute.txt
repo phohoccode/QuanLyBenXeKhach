@@ -1,0 +1,8 @@
+D:\BaoCao\dotnet\XacThucNguoiDung\obj\Release\XacThucNguoiDung.csproj.AssemblyReference.cache
+D:\BaoCao\dotnet\XacThucNguoiDung\obj\Release\XacThucNguoiDung.FrmChangePassword.resources
+D:\BaoCao\dotnet\XacThucNguoiDung\obj\Release\XacThucNguoiDung.FrmForgotPassword.resources
+D:\BaoCao\dotnet\XacThucNguoiDung\obj\Release\XacThucNguoiDung.FrmLogin.resources
+D:\BaoCao\dotnet\XacThucNguoiDung\obj\Release\XacThucNguoiDung.FrmRegister.resources
+D:\BaoCao\dotnet\XacThucNguoiDung\obj\Release\XacThucNguoiDung.Properties.Resources.resources
+D:\BaoCao\dotnet\XacThucNguoiDung\obj\Release\XacThucNguoiDung.csproj.GenerateResource.cache
+D:\BaoCao\dotnet\XacThucNguoiDung\obj\Release\XacThucNguoiDung.csproj.CoreCompileInputs.cache

@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 
 public class Connection
 {
-    private string strConn = "Server=localhost;Database=QUANLYBENXE;Trusted_Connection=True;";
+    private string strConn = "Server=localhost;Database=QUANLYBENXEKHACH;Trusted_Connection=True;";
 
     public SqlConnection conn { get; set; }
     public SqlCommand cmd { get; set; }

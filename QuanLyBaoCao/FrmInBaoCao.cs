@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -23,28 +24,53 @@ namespace QuanLyBaoCao
 
         private void FrmInBaoCao_Load(object sender, EventArgs e)
         {
-            DataTable dataTable = new DataTable();
-            dataTable.Columns.Add("Mã báo cáo", typeof(string));
-            dataTable.Columns.Add("Người lập báo cáo", typeof(string));
-            dataTable.Columns.Add("Thời gian lập báo cáo", typeof(DateTime));
-            dataTable.Columns.Add("Tổng doanh thu", typeof(decimal));
-            dataTable.Columns.Add("Chi phí vận hành", typeof(decimal));
-            dataTable.Columns.Add("Lợi nhuận", typeof(decimal));
+            Connection conn = new Connection();
+            bool check_conn = conn.openConn();
 
-            // Tạo dữ liệu giả và thêm vào DataTable
-            for (int i = 1; i <= 10; i++)
+            if (!check_conn)
             {
-                string reportID = "BC" + i.ToString("D3"); // Mã báo cáo giả
-                string reportUser = $"User {i}"; // Người lập báo cáo giả
-                DateTime reportDate = DateTime.Now.AddDays(-i); // Thời gian lập báo cáo giả
-                decimal totalRevenue = new Random().Next(1000000, 5000000); // Tổng doanh thu giả
-                decimal operationCost = new Random().Next(500000, 2000000); // Chi phí vận hành giả
-                decimal profit = totalRevenue - operationCost; // Lợi nhuận giả
+                MessageBox.Show("Kết nối Sql thất bại!");
+                conn.closeConn();
+                return;
+            }
 
-                // Thêm dòng vào DataTable
-                dataTable.Rows.Add(reportID, reportUser, reportDate, totalRevenue, operationCost, profit);
+            string Sql =
+                "SELECT " +
+                "BAOCAO.MaBaoCao," +
+                "BAOCAO.TenBaoCao," +
+                "BAOCAO.GhiChu," +
+                "NGUOIDUNG.TenDangNhap AS NguoiLapBaoCao," +
+                "BAOCAO.SoVeBanDuoc, BAOCAO.TongDoanhThu," +
+                "BAOCAO.ThoiGianLap " +
+                "FROM BAOCAO " +
+                "JOIN NGUOIDUNG ON BAOCAO.MaNguoiDung = NGUOIDUNG.MaNguoiDung;";
+            SqlDataReader drd = conn.executeSQL(Sql);
+
+            DataTable dataTable = new DataTable();
+            dataTable.Columns.Add("Mã báo cáo", typeof(int));
+            dataTable.Columns.Add("Tên báo cáo", typeof(string));
+            dataTable.Columns.Add("Người lập báo cáo", typeof(string));
+            dataTable.Columns.Add("Số vé bán được", typeof(decimal));
+            dataTable.Columns.Add("Tổng doanh thu", typeof(decimal));
+            dataTable.Columns.Add("Thời gian lập báo cáo", typeof(DateTime));
+            dataTable.Columns.Add("Ghi chú", typeof(string));
+
+
+            while (drd.Read())
+            {
+                int maBaoCao = (int)drd["MaBaoCao"];
+                string tenBaoCao = drd["TenBaoCao"].ToString();
+                string ghiChu = drd["GhiChu"].ToString();
+                string nguoiLapBaoCao = drd["NguoiLapBaoCao"].ToString();
+                int soVeBanDuoc = (int)drd["SoVeBanDuoc"];
+                decimal tongDoanhthu = (decimal)drd["TongDoanhThu"];
+                DateTime thoiGianLap = (DateTime)drd["ThoiGianLap"];
+                dataTable.Rows.Add(maBaoCao, tenBaoCao, nguoiLapBaoCao, soVeBanDuoc, tongDoanhthu, thoiGianLap, ghiChu);
             }
             dgvDSBaoCao.DataSource = dataTable;
+
+            drd.Close();
+            conn.closeConn();
         }
 
         private void PrintReportToWord(string reportCode, string reportContent)
@@ -60,15 +86,15 @@ namespace QuanLyBaoCao
             doc.Content.Text = "Mã báo cáo: " + reportCode;
 
             // Thêm nội dung báo cáo vào tài liệu
-            doc.Content.Text += "Nội dung báo cáo:\n" + reportContent + "\n";
+            doc.Content.Text += "\n" + reportContent;
 
             // Lưu tài liệu vào thư mục với tên file là mã báo cáo
-            string filePath = @"D:\BaoCao\DanhSachBaoCao\" + reportCode + "_Report.docx";
+            string filePath = @"D:\BaoCao\dotnet\FileInBaoCao\" + reportCode + "_Report.docx";
 
             // Kiểm tra thư mục lưu trữ có tồn tại chưa, nếu không thì tạo thư mục
-            if (!Directory.Exists(@"D:\BaoCao\DanhSachBaoCao"))
+            if (!Directory.Exists(@"D:\BaoCao\dotnet\FileInBaoCao\"))
             {
-                Directory.CreateDirectory(@"D:\BaoCao\DanhSachBaoCao");
+                Directory.CreateDirectory(@"D:\BaoCao\dotnet\FileInBaoCao\");
             }
 
             // Lưu và đóng tài liệu
@@ -84,12 +110,12 @@ namespace QuanLyBaoCao
             using (var doc = new iTextSharp.text.Document())
             {
                 // Lưu tệp PDF vào thư mục bạn chỉ định
-                string filePath = @"D:\BaoCao\DanhSachBaoCao\" + reportCode + "_Report.pdf";
+                string filePath = @"D:\BaoCao\dotnet\FileInBaoCao\" + reportCode + "_Report.pdf";
 
                 // Kiểm tra thư mục lưu trữ có tồn tại chưa, nếu không thì tạo thư mục
-                if (!Directory.Exists(@"D:\BaoCao\DanhSachBaoCao"))
+                if (!Directory.Exists(@"D:\BaoCao\dotnet\FileInBaoCao\"))
                 {
-                    Directory.CreateDirectory(@"D:\BaoCao\DanhSachBaoCao");
+                    Directory.CreateDirectory(@"D:\BaoCao\dotnet\FileInBaoCao\");
                 }
 
                 // Tạo đối tượng Writer để ghi PDF vào file
@@ -102,7 +128,7 @@ namespace QuanLyBaoCao
                     doc.Add(new iTextSharp.text.Paragraph("Mã báo cáo: " + reportCode));
 
                     // Thêm nội dung báo cáo vào PDF
-                    doc.Add(new iTextSharp.text.Paragraph("Nội dung báo cáo:\n" + reportContent));
+                    doc.Add(new iTextSharp.text.Paragraph("\n" + reportContent));
 
                     // Đóng tài liệu PDF
                     doc.Close();
@@ -112,55 +138,53 @@ namespace QuanLyBaoCao
             }
         }
 
-
-        private void btnInNgay_Click(object sender, EventArgs e)
+        private void btnXacNhan_Click(object sender, EventArgs e)
         {
             // Kiểm tra xem người dùng đã chọn dòng nào trong DataGridView chưa
             if (dgvDSBaoCao.SelectedRows.Count > 0)
             {
                 // Lấy thông tin từ dòng được chọn
-                string reportCode = dgvDSBaoCao.SelectedRows[0].Cells["Mã báo cáo"].Value.ToString();
-                string reportUser = dgvDSBaoCao.SelectedRows[0].Cells["Người lập báo cáo"].Value.ToString();
-                DateTime reportDate = Convert.ToDateTime(dgvDSBaoCao.SelectedRows[0].Cells["Thời gian lập báo cáo"].Value);
-                decimal totalRevenue = Convert.ToDecimal(dgvDSBaoCao.SelectedRows[0].Cells["Tổng doanh thu"].Value);
-                decimal operationCost = Convert.ToDecimal(dgvDSBaoCao.SelectedRows[0].Cells["Chi phí vận hành"].Value);
-                decimal profit = Convert.ToDecimal(dgvDSBaoCao.SelectedRows[0].Cells["Lợi nhuận"].Value);
+                string maBaoCao = dgvDSBaoCao.SelectedRows[0].Cells["Mã báo cáo"].Value.ToString();
+                string tenBaoCao = dgvDSBaoCao.SelectedRows[0].Cells["Tên báo cáo"].Value.ToString();
+                string nguoiLapBaoCao = dgvDSBaoCao.SelectedRows[0].Cells["Người lập báo cáo"].Value.ToString();
+                string ghiChu = dgvDSBaoCao.SelectedRows[0].Cells["Ghi chú"].Value.ToString();
+                int soVeBanDuoc = Convert.ToInt32(dgvDSBaoCao.SelectedRows[0].Cells["Số vé bán được"].Value);
+                decimal tongDoanhThu = Convert.ToDecimal(dgvDSBaoCao.SelectedRows[0].Cells["Tổng doanh thu"].Value);
+                DateTime thoiGianLapBaoCao = Convert.ToDateTime(dgvDSBaoCao.SelectedRows[0].Cells["Thời gian lập báo cáo"].Value);
 
-            
+
                 if (cbDinhDang.SelectedItem != null)
                 {
-                  
-                    string reportContent = $"Người lập báo cáo: {reportUser}\n" +
-                                           $"Thời gian lập báo cáo: {reportDate.ToString("dd/MM/yyyy")}\n" +
-                                           $"Tổng doanh thu: {totalRevenue:C}\n" +
-                                           $"Chi phí vận hành: {operationCost:C}\n" +
-                                           $"Lợi nhuận: {profit:C}";
+                    string reportContent = $"Người lập báo cáo: {nguoiLapBaoCao}\n" +
+                                             $"Thời gian lập báo cáo: {thoiGianLapBaoCao.ToString("dd/MM/yyyy")}\n" +
+                                             $"Tổng doanh thu: {tongDoanhThu:C}\n" +
+                                             $"Số vé bán được: {soVeBanDuoc}\n" +
+                                             $"Ghi chú: {ghiChu}";
 
                     string selectedFormat = cbDinhDang.SelectedItem.ToString();
 
                     if (selectedFormat == "Word")
                     {
-                       
-                        PrintReportToWord(reportCode, reportContent);
+
+                        PrintReportToWord(maBaoCao, reportContent);
                     }
                     else if (selectedFormat == "PDF")
                     {
-                      
-                        PrintReportToPdf(reportCode, reportContent);
+
+                        PrintReportToPdf(maBaoCao, reportContent);
                     }
-           
+
                 }
                 else
                 {
                     MessageBox.Show("Vui lòng chọn định dạng báo cáo (Word hoặc PDF).");
                 }
-                
+
             }
             else
             {
                 MessageBox.Show("Vui lòng chọn một báo cáo để in.");
             }
         }
-
     }
 }

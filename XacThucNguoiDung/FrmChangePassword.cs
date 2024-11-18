@@ -57,7 +57,7 @@ namespace XacThucNguoiDung
 
             string OTP = txtToken.Text;
 
-            string Sql_CheckOTP = "Select * from XacMinhTaiKhoan where MaToken = " + "'" + OTP + "'";
+            string Sql_CheckOTP = "Select * from XACMINHTAIKHOAN where MaToken = " + "'" + OTP + "'";
 
             SqlDataReader drd = conn.executeSQL(Sql_CheckOTP);
 
@@ -75,7 +75,7 @@ namespace XacThucNguoiDung
             string newPassword = txtPassword.Text;
 
             string Sql_UpdatePassword =
-                "Update NguoiDung set MatKhau = " + "'" + newPassword + "'";
+                "Update NGUOIDUNG set MatKhau = " + "'" + newPassword + "'";
 
             int rows = conn.executeUpdate(Sql_UpdatePassword);
 

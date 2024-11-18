@@ -83,7 +83,7 @@ namespace XacThucNguoiDung
                 return;
             }
 
-            string Sql_FindUser = "Select * from NguoiDung where Email = " +
+            string Sql_FindUser = "Select * from NGUOIDUNG where Email = " +
                 "'" + email + "'" + " and MatKhau = " + "'" + password + "'";
 
             SqlDataReader drd = conn.executeSQL(Sql_FindUser);

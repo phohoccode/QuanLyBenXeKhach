@@ -1,0 +1,8 @@
+D:\BaoCao\dotnet\QuanLyBaoCao\obj\Release\QuanLyBaoCao.csproj.AssemblyReference.cache
+D:\BaoCao\dotnet\QuanLyBaoCao\obj\Release\QuanLyBaoCao.FrmDanhSachBaoCao.resources
+D:\BaoCao\dotnet\QuanLyBaoCao\obj\Release\QuanLyBaoCao.FrmInBaoCao.resources
+D:\BaoCao\dotnet\QuanLyBaoCao\obj\Release\QuanLyBaoCao.FrmQuanLyBaoCao.resources
+D:\BaoCao\dotnet\QuanLyBaoCao\obj\Release\QuanLyBaoCao.Properties.Resources.resources
+D:\BaoCao\dotnet\QuanLyBaoCao\obj\Release\QuanLyBaoCao.FrmTaoBaoCao.resources
+D:\BaoCao\dotnet\QuanLyBaoCao\obj\Release\QuanLyBaoCao.csproj.GenerateResource.cache
+D:\BaoCao\dotnet\QuanLyBaoCao\obj\Release\QuanLyBaoCao.csproj.CoreCompileInputs.cache
