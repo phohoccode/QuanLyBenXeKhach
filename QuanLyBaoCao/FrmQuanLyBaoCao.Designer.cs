@@ -29,8 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnInBaoCao = new System.Windows.Forms.Button();
-            this.btnThoat = new System.Windows.Forms.Button();
+            this.btnXuatBaoCao = new System.Windows.Forms.Button();
             this.btnThemMoi = new System.Windows.Forms.Button();
             this.btnDSBaoCao = new System.Windows.Forms.Button();
             this.panelContainer = new System.Windows.Forms.Panel();
@@ -39,9 +38,8 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.btnInBaoCao);
-            this.panel1.Controls.Add(this.btnThoat);
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.btnXuatBaoCao);
             this.panel1.Controls.Add(this.btnThemMoi);
             this.panel1.Controls.Add(this.btnDSBaoCao);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -52,31 +50,17 @@
             this.panel1.Size = new System.Drawing.Size(225, 753);
             this.panel1.TabIndex = 1;
             // 
-            // btnInBaoCao
+            // btnXuatBaoCao
             // 
-            this.btnInBaoCao.Image = global::QuanLyBaoCao.Properties.Resources.printer;
-            this.btnInBaoCao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInBaoCao.Location = new System.Drawing.Point(12, 150);
-            this.btnInBaoCao.Name = "btnInBaoCao";
-            this.btnInBaoCao.Size = new System.Drawing.Size(200, 40);
-            this.btnInBaoCao.TabIndex = 0;
-            this.btnInBaoCao.Text = "In báo cáo";
-            this.btnInBaoCao.UseVisualStyleBackColor = true;
-            this.btnInBaoCao.Click += new System.EventHandler(this.btnInBaoCao_Click);
-            // 
-            // btnThoat
-            // 
-            this.btnThoat.BackColor = System.Drawing.Color.White;
-            this.btnThoat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnThoat.Image = global::QuanLyBaoCao.Properties.Resources.power_off;
-            this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThoat.Location = new System.Drawing.Point(12, 701);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(200, 40);
-            this.btnThoat.TabIndex = 0;
-            this.btnThoat.Text = "Thoát";
-            this.btnThoat.UseVisualStyleBackColor = false;
-            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            this.btnXuatBaoCao.Image = global::QuanLyBaoCao.Properties.Resources.export;
+            this.btnXuatBaoCao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXuatBaoCao.Location = new System.Drawing.Point(12, 150);
+            this.btnXuatBaoCao.Name = "btnXuatBaoCao";
+            this.btnXuatBaoCao.Size = new System.Drawing.Size(200, 40);
+            this.btnXuatBaoCao.TabIndex = 0;
+            this.btnXuatBaoCao.Text = "Xuất báo cáo";
+            this.btnXuatBaoCao.UseVisualStyleBackColor = true;
+            this.btnXuatBaoCao.Click += new System.EventHandler(this.btnXuatBaoCao_Click);
             // 
             // btnThemMoi
             // 
@@ -107,9 +91,9 @@
             // 
             // panelContainer
             // 
-            this.panelContainer.BackColor = System.Drawing.Color.White;
+            this.panelContainer.BackColor = System.Drawing.Color.Transparent;
             this.panelContainer.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelContainer.Location = new System.Drawing.Point(232, 0);
+            this.panelContainer.Location = new System.Drawing.Point(250, 0);
             this.panelContainer.Name = "panelContainer";
             this.panelContainer.Size = new System.Drawing.Size(750, 753);
             this.panelContainer.TabIndex = 2;
@@ -119,13 +103,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.CancelButton = this.btnThoat;
-            this.ClientSize = new System.Drawing.Size(982, 753);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1000, 753);
             this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.ForeColor = System.Drawing.Color.Black;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -143,8 +127,7 @@
         private System.Windows.Forms.Button btnDSBaoCao;
         private System.Windows.Forms.Button btnThemMoi;
         private System.Windows.Forms.Panel panelContainer;
-        private System.Windows.Forms.Button btnInBaoCao;
-        private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.Button btnXuatBaoCao;
     }
 }
 

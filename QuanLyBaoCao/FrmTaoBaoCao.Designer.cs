@@ -34,16 +34,16 @@
             this.btmTimKiem = new System.Windows.Forms.Button();
             this.btnLamMoi = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.dateTime = new System.Windows.Forms.DateTimePicker();
             this.txtGhiChu = new System.Windows.Forms.TextBox();
+            this.txtTongDoanhThu = new System.Windows.Forms.TextBox();
             this.txtSoVeBanDuoc = new System.Windows.Forms.TextBox();
             this.txtTenBaoCao = new System.Windows.Forms.TextBox();
-            this.txtTongDoanhThu = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,6 +71,7 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Báo cáo doanh thu";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // cbNguoiLapBaoCao
             // 
@@ -129,6 +130,15 @@
             this.label9.TabIndex = 3;
             this.label9.Text = "Ghi chú";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(502, 186);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(136, 21);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Tổng doanh thu";
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -181,6 +191,15 @@
             this.txtGhiChu.Size = new System.Drawing.Size(686, 293);
             this.txtGhiChu.TabIndex = 1;
             // 
+            // txtTongDoanhThu
+            // 
+            this.txtTongDoanhThu.Enabled = false;
+            this.txtTongDoanhThu.Location = new System.Drawing.Point(506, 220);
+            this.txtTongDoanhThu.Multiline = true;
+            this.txtTongDoanhThu.Name = "txtTongDoanhThu";
+            this.txtTongDoanhThu.Size = new System.Drawing.Size(200, 40);
+            this.txtTongDoanhThu.TabIndex = 1;
+            // 
             // txtSoVeBanDuoc
             // 
             this.txtSoVeBanDuoc.Enabled = false;
@@ -197,24 +216,6 @@
             this.txtTenBaoCao.Name = "txtTenBaoCao";
             this.txtTenBaoCao.Size = new System.Drawing.Size(389, 40);
             this.txtTenBaoCao.TabIndex = 1;
-            // 
-            // txtTongDoanhThu
-            // 
-            this.txtTongDoanhThu.Enabled = false;
-            this.txtTongDoanhThu.Location = new System.Drawing.Point(506, 220);
-            this.txtTongDoanhThu.Multiline = true;
-            this.txtTongDoanhThu.Name = "txtTongDoanhThu";
-            this.txtTongDoanhThu.Size = new System.Drawing.Size(200, 40);
-            this.txtTongDoanhThu.TabIndex = 1;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(502, 186);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(136, 21);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Tổng doanh thu";
             // 
             // FrmTaoBaoCao
             // 

@@ -292,3 +292,9 @@ D:\BaoCao\dotnet\XacThucNguoiDung\bin\Debug\zh-Hant\Microsoft.Data.SqlClient.res
 D:\BaoCao\dotnet\XacThucNguoiDung\obj\Debug\XacThucN.CA6B0224.Up2Date
 D:\BaoCao\dotnet\XacThucNguoiDung\obj\Debug\XacThucNguoiDung.exe
 D:\BaoCao\dotnet\XacThucNguoiDung\obj\Debug\XacThucNguoiDung.pdb
+D:\BaoCao\dotnet\XacThucNguoiDung\bin\Debug\TrangChu.exe
+D:\BaoCao\dotnet\XacThucNguoiDung\bin\Debug\TrangChu.pdb
+D:\BaoCao\dotnet\XacThucNguoiDung\bin\Debug\TrangChu.exe.config
+D:\BaoCao\dotnet\XacThucNguoiDung\bin\Debug\HoTroHanhKhach.exe
+D:\BaoCao\dotnet\XacThucNguoiDung\bin\Debug\HoTroHanhKhach.pdb
+D:\BaoCao\dotnet\XacThucNguoiDung\bin\Debug\HoTroHanhKhach.exe.config

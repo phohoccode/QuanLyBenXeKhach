@@ -76,7 +76,7 @@ namespace QuanLyBaoCao
 
         private void btnLamMoi_Click(object sender, EventArgs e)
         {
-           clearFields()
+            clearFields();
         }
 
         private void btmTimKiem_Click(object sender, EventArgs e)
@@ -144,6 +144,11 @@ namespace QuanLyBaoCao
             }
 
             drd.Close();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

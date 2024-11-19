@@ -40,37 +40,31 @@ namespace QuanLyBaoCao
 
         private void FrmQuanLyBaoCao_Load(object sender, EventArgs e)
         {
-            FrmDanhSachBaoCao frmDanhSachBaoCao = new FrmDanhSachBaoCao();
-            ShowFormInPanel(frmDanhSachBaoCao);
+            ShowFormInPanel(new FrmDanhSachBaoCao());
         }
 
         private void btnDSBaoCao_Click(object sender, EventArgs e)
         {
-            FrmDanhSachBaoCao frmDanhSachBaoCao = new FrmDanhSachBaoCao();
-            ShowFormInPanel(frmDanhSachBaoCao);
+            ShowFormInPanel(new FrmDanhSachBaoCao());
         }
 
         private void btnThemMoi_Click(object sender, EventArgs e)
         {
-            FrmTaoBaoCao frmTaoBaoCao = new FrmTaoBaoCao();
-            ShowFormInPanel(frmTaoBaoCao);
+            ShowFormInPanel(new FrmTaoBaoCao());
         }
 
-        private void btnInBaoCao_Click(object sender, EventArgs e)
-        {
-            FrmInBaoCao frmInBaoCao = new FrmInBaoCao();
-            ShowFormInPanel(frmInBaoCao);
-
-        }
+       
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
 
+
+        private void btnXuatBaoCao_Click(object sender, EventArgs e)
+        {
+            ShowFormInPanel(new FrmInBaoCao());
         }
     }
 }

@@ -10,7 +10,13 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{927A51AD-77A2-46F1-8F15-E291B82E6636}"
 	ProjectSection(SolutionItems) = preProject
 		Connection.cs = Connection.cs
+		UserInfo.cs = UserInfo.cs
+		UserSession.cs = UserSession.cs
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrangChu", "TrangChu\TrangChu.csproj", "{467B5D56-4B49-4EE2-BC8C-F64869635593}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HoTroHanhKhach", "HoTroHanhKhach\HoTroHanhKhach.csproj", "{99468C32-6542-4D84-BAA9-AD255F9A85EE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +32,14 @@ Global
 		{6B018250-C976-441E-9E89-CF839112F539}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B018250-C976-441E-9E89-CF839112F539}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B018250-C976-441E-9E89-CF839112F539}.Release|Any CPU.Build.0 = Release|Any CPU
+		{467B5D56-4B49-4EE2-BC8C-F64869635593}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{467B5D56-4B49-4EE2-BC8C-F64869635593}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{467B5D56-4B49-4EE2-BC8C-F64869635593}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{467B5D56-4B49-4EE2-BC8C-F64869635593}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99468C32-6542-4D84-BAA9-AD255F9A85EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99468C32-6542-4D84-BAA9-AD255F9A85EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99468C32-6542-4D84-BAA9-AD255F9A85EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99468C32-6542-4D84-BAA9-AD255F9A85EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

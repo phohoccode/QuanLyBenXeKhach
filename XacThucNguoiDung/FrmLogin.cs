@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TrangChu;
 
 namespace XacThucNguoiDung
 {
@@ -57,7 +58,7 @@ namespace XacThucNguoiDung
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (txtEmail.Text == "" ||  txtPassword.Text == "")
+            if (txtEmail.Text == "" || txtPassword.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
                 return;
@@ -90,9 +91,17 @@ namespace XacThucNguoiDung
 
             if (drd.HasRows)
             {
-                FrmQuanLyBaoCao frmQuanLyBaoCao = new FrmQuanLyBaoCao();
-                frmQuanLyBaoCao.Show();
-                this.Hide();
+                while (drd.Read())
+                {
+                    string usernameFromDrd = drd["TenDangNhap"].ToString();
+                    string roleFromDrd = drd["VaiTro"].ToString();
+                    string emailFromDrd = drd["Email"].ToString();
+
+                    UserSession.SaveUserInfo(usernameFromDrd, emailFromDrd, roleFromDrd);
+
+                    showForm(new FrmTrangChuAdmin());
+                    this.Hide();
+                }
             }
             else
             {

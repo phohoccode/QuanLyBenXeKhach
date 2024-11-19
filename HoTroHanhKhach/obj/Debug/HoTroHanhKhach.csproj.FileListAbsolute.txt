@@ -1,0 +1,15 @@
+D:\BaoCao\dotnet\HoTroHanhKhach\bin\Debug\HoTroHanhKhach.exe.config
+D:\BaoCao\dotnet\HoTroHanhKhach\bin\Debug\HoTroHanhKhach.exe
+D:\BaoCao\dotnet\HoTroHanhKhach\bin\Debug\HoTroHanhKhach.pdb
+D:\BaoCao\dotnet\HoTroHanhKhach\obj\Debug\HoTroHanhKhach.csproj.AssemblyReference.cache
+D:\BaoCao\dotnet\HoTroHanhKhach\obj\Debug\HoTroHanhKhach.FrmHoTroHanhKhach.resources
+D:\BaoCao\dotnet\HoTroHanhKhach\obj\Debug\HoTroHanhKhach.Properties.Resources.resources
+D:\BaoCao\dotnet\HoTroHanhKhach\obj\Debug\HoTroHanhKhach.csproj.GenerateResource.cache
+D:\BaoCao\dotnet\HoTroHanhKhach\obj\Debug\HoTroHanhKhach.csproj.CoreCompileInputs.cache
+D:\BaoCao\dotnet\HoTroHanhKhach\obj\Debug\HoTroHanhKhach.exe
+D:\BaoCao\dotnet\HoTroHanhKhach\obj\Debug\HoTroHanhKhach.pdb
+D:\BaoCao\dotnet\HoTroHanhKhach\obj\Debug\HoTroHanhKhach.FrmThongTinLienHe.resources
+D:\BaoCao\dotnet\HoTroHanhKhach\obj\Debug\HoTroHanhKhach.FrmHuongDan.resources
+D:\BaoCao\dotnet\HoTroHanhKhach\obj\Debug\HoTroHanhKhach.FrmHuongDanDatVe.resources
+D:\BaoCao\dotnet\HoTroHanhKhach\obj\Debug\HoTroHanhKhach.FrmQuyTrinhKhieuNai.resources
+D:\BaoCao\dotnet\HoTroHanhKhach\obj\Debug\HoTroHanhKhach.FrmKhieuNai.resources
