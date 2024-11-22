@@ -21,6 +21,7 @@ namespace XacThucNguoiDung
             InitializeComponent();
         }
 
+
         private bool checkValidEmail(string email)
         {
             try

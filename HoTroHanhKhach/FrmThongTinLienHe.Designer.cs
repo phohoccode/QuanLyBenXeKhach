@@ -45,21 +45,23 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -75,7 +77,7 @@
             this.groupBox1.Size = new System.Drawing.Size(702, 149);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thông tin liên hệ hệ thống";
+            this.groupBox1.Text = "Thông tin liên hệ bến xe";
             // 
             // textBox4
             // 
@@ -222,92 +224,32 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.textBox9);
-            this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Controls.Add(this.textBox12);
-            this.groupBox3.Controls.Add(this.textBox13);
-            this.groupBox3.Controls.Add(this.label12);
-            this.groupBox3.Controls.Add(this.label13);
             this.groupBox3.Controls.Add(this.textBox8);
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.textBox10);
             this.groupBox3.Controls.Add(this.textBox11);
             this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Controls.Add(this.label11);
-            this.groupBox3.Location = new System.Drawing.Point(12, 380);
+            this.groupBox3.Location = new System.Drawing.Point(12, 370);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(702, 330);
+            this.groupBox3.Size = new System.Drawing.Size(702, 155);
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Quản lý bến xe";
-            // 
-            // textBox9
-            // 
-            this.textBox9.Enabled = false;
-            this.textBox9.Location = new System.Drawing.Point(195, 206);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(489, 26);
-            this.textBox9.TabIndex = 9;
-            this.textBox9.Text = "phohoccode";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(19, 249);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(64, 21);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "Email ";
-            // 
-            // textBox12
-            // 
-            this.textBox12.Enabled = false;
-            this.textBox12.Location = new System.Drawing.Point(195, 286);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(489, 26);
-            this.textBox12.TabIndex = 6;
-            this.textBox12.Text = "0789123456";
-            // 
-            // textBox13
-            // 
-            this.textBox13.Enabled = false;
-            this.textBox13.Location = new System.Drawing.Point(195, 246);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(489, 26);
-            this.textBox13.TabIndex = 7;
-            this.textBox13.Text = "phohoccode@benxexanh.com";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(19, 289);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(127, 21);
-            this.label12.TabIndex = 4;
-            this.label12.Text = "Số điện thoại";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(19, 209);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(37, 21);
-            this.label13.TabIndex = 5;
-            this.label13.Text = "Tên";
+            this.groupBox3.Text = "Giám đốc bến xe";
             // 
             // textBox8
             // 
             this.textBox8.Enabled = false;
-            this.textBox8.Location = new System.Drawing.Point(195, 41);
+            this.textBox8.Location = new System.Drawing.Point(195, 30);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(489, 26);
             this.textBox8.TabIndex = 3;
-            this.textBox8.Text = "phohoccode";
+            this.textBox8.Text = "Nguyễn Văn A";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(19, 84);
+            this.label8.Location = new System.Drawing.Point(19, 73);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(64, 21);
             this.label8.TabIndex = 2;
@@ -316,25 +258,25 @@
             // textBox10
             // 
             this.textBox10.Enabled = false;
-            this.textBox10.Location = new System.Drawing.Point(195, 121);
+            this.textBox10.Location = new System.Drawing.Point(195, 110);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(489, 26);
             this.textBox10.TabIndex = 1;
-            this.textBox10.Text = "0789123456";
+            this.textBox10.Text = "0909090909";
             // 
             // textBox11
             // 
             this.textBox11.Enabled = false;
-            this.textBox11.Location = new System.Drawing.Point(195, 81);
+            this.textBox11.Location = new System.Drawing.Point(195, 70);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(489, 26);
             this.textBox11.TabIndex = 1;
-            this.textBox11.Text = "phohoccode@benxexanh.com";
+            this.textBox11.Text = "nguyenvana@benxexanh.com";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(19, 124);
+            this.label10.Location = new System.Drawing.Point(19, 113);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(127, 21);
             this.label10.TabIndex = 0;
@@ -343,11 +285,80 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(19, 44);
+            this.label11.Location = new System.Drawing.Point(19, 33);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(37, 21);
             this.label11.TabIndex = 0;
             this.label11.Text = "Tên";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.textBox9);
+            this.groupBox4.Controls.Add(this.label9);
+            this.groupBox4.Controls.Add(this.textBox12);
+            this.groupBox4.Controls.Add(this.textBox13);
+            this.groupBox4.Controls.Add(this.label12);
+            this.groupBox4.Controls.Add(this.label13);
+            this.groupBox4.Location = new System.Drawing.Point(12, 546);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(702, 155);
+            this.groupBox4.TabIndex = 5;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Quản lý bến xe";
+            // 
+            // textBox9
+            // 
+            this.textBox9.Enabled = false;
+            this.textBox9.Location = new System.Drawing.Point(195, 30);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(489, 26);
+            this.textBox9.TabIndex = 3;
+            this.textBox9.Text = "Trần Thị B";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(19, 73);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(64, 21);
+            this.label9.TabIndex = 2;
+            this.label9.Text = "Email ";
+            // 
+            // textBox12
+            // 
+            this.textBox12.Enabled = false;
+            this.textBox12.Location = new System.Drawing.Point(195, 110);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(489, 26);
+            this.textBox12.TabIndex = 1;
+            this.textBox12.Text = "0808080808";
+            // 
+            // textBox13
+            // 
+            this.textBox13.Enabled = false;
+            this.textBox13.Location = new System.Drawing.Point(195, 70);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(489, 26);
+            this.textBox13.TabIndex = 1;
+            this.textBox13.Text = "tranthib@benxexanh.com";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(19, 113);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(127, 21);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Số điện thoại";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(19, 33);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(37, 21);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Tên";
             // 
             // FrmThongTinLienHe
             // 
@@ -355,6 +366,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(730, 722);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -369,6 +381,8 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -398,6 +412,7 @@
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox12;

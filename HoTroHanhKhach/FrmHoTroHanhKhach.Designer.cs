@@ -55,7 +55,7 @@
             this.btnKhieuNai.Name = "btnKhieuNai";
             this.btnKhieuNai.Size = new System.Drawing.Size(200, 42);
             this.btnKhieuNai.TabIndex = 1;
-            this.btnKhieuNai.Text = "Khiếu nại";
+            this.btnKhieuNai.Text = "Gửi khiếu nại";
             this.btnKhieuNai.UseVisualStyleBackColor = true;
             this.btnKhieuNai.Click += new System.EventHandler(this.btnKhieuNai_Click);
             // 

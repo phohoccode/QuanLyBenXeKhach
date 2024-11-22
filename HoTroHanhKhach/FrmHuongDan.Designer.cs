@@ -44,6 +44,7 @@
             // 
             // cbLoaiHuongDan
             // 
+            this.cbLoaiHuongDan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbLoaiHuongDan.FormattingEnabled = true;
             this.cbLoaiHuongDan.Items.AddRange(new object[] {
             "Đặt Vé",

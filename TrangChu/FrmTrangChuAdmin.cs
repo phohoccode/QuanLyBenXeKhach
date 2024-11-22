@@ -1,5 +1,6 @@
 ﻿using HoTroHanhKhach;
 using QuanLyBaoCao;
+using QuanLyDoanhThu;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -31,12 +32,10 @@ namespace TrangChu
 
         private void FrmTrangChuAdmin_Load(object sender, EventArgs e)
         {
-            ShowFormInPanel(new FrmQuanLyBaoCao());
+            
 
            
         }
-
-       
 
         private void btnQuanLyNguoiDung_Click(object sender, EventArgs e)
         {
@@ -65,7 +64,7 @@ namespace TrangChu
 
         private void btnQuanLyDoanhThu_Click(object sender, EventArgs e)
         {
-
+            ShowFormInPanel(new FrmQuanLyDoanhThu());
         }
 
         private void btnHoTroHanhKhach_Click(object sender, EventArgs e)

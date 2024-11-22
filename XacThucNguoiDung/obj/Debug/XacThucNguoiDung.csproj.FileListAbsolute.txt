@@ -298,3 +298,6 @@ D:\BaoCao\dotnet\XacThucNguoiDung\bin\Debug\TrangChu.exe.config
 D:\BaoCao\dotnet\XacThucNguoiDung\bin\Debug\HoTroHanhKhach.exe
 D:\BaoCao\dotnet\XacThucNguoiDung\bin\Debug\HoTroHanhKhach.pdb
 D:\BaoCao\dotnet\XacThucNguoiDung\bin\Debug\HoTroHanhKhach.exe.config
+D:\BaoCao\dotnet\XacThucNguoiDung\bin\Debug\QuanLyDoanhThu.exe
+D:\BaoCao\dotnet\XacThucNguoiDung\bin\Debug\QuanLyDoanhThu.pdb
+D:\BaoCao\dotnet\XacThucNguoiDung\bin\Debug\QuanLyDoanhThu.exe.config

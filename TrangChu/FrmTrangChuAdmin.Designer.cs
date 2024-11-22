@@ -29,23 +29,24 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panelContainer = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnDangXuat = new System.Windows.Forms.Button();
             this.btnQuanLyLichTrinh = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnHoTroHanhKhach = new System.Windows.Forms.Button();
             this.btnQuanLyDoanhThu = new System.Windows.Forms.Button();
             this.btnQuanLyXeKhach = new System.Windows.Forms.Button();
             this.btnQuanLyNguoiDung = new System.Windows.Forms.Button();
             this.btnQuanLyVeXe = new System.Windows.Forms.Button();
             this.btnQuanLyBaoCao = new System.Windows.Forms.Button();
+            this.panelContainer = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.btnDangXuat);
             this.panel1.Controls.Add(this.btnQuanLyLichTrinh);
@@ -62,24 +63,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(250, 761);
             this.panel1.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Cascadia Code SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(23, 159);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(210, 32);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "QUẢN LÝ BẾN XE";
-            // 
-            // panelContainer
-            // 
-            this.panelContainer.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelContainer.Location = new System.Drawing.Point(250, 0);
-            this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(1000, 761);
-            this.panelContainer.TabIndex = 1;
             // 
             // pictureBox1
             // 
@@ -116,6 +99,16 @@
             this.btnQuanLyLichTrinh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnQuanLyLichTrinh.UseVisualStyleBackColor = true;
             this.btnQuanLyLichTrinh.Click += new System.EventHandler(this.btnQuanLyLichTrinh_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Cascadia Code SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.Location = new System.Drawing.Point(23, 159);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(210, 32);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "QUẢN LÝ BẾN XE";
             // 
             // btnHoTroHanhKhach
             // 
@@ -200,6 +193,14 @@
             this.btnQuanLyBaoCao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnQuanLyBaoCao.UseVisualStyleBackColor = true;
             this.btnQuanLyBaoCao.Click += new System.EventHandler(this.btnQuanLyBaoCao_Click);
+            // 
+            // panelContainer
+            // 
+            this.panelContainer.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelContainer.Location = new System.Drawing.Point(250, 0);
+            this.panelContainer.Name = "panelContainer";
+            this.panelContainer.Size = new System.Drawing.Size(1000, 761);
+            this.panelContainer.TabIndex = 1;
             // 
             // FrmTrangChuAdmin
             // 

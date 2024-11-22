@@ -115,6 +115,10 @@
       <Project>{6b018250-c976-441e-9e89-cf839112f539}</Project>
       <Name>QuanLyBaoCao</Name>
     </ProjectReference>
+    <ProjectReference Include="..\QuanLyDoanhThu\QuanLyDoanhThu.csproj">
+      <Project>{6c5f4fb0-bfbd-4d01-821e-687112ee262d}</Project>
+      <Name>QuanLyDoanhThu</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\bus-stop %281%29.png" />

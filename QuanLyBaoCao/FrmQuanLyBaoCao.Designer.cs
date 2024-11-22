@@ -28,75 +28,135 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnXuatBaoCao = new System.Windows.Forms.Button();
-            this.btnThemMoi = new System.Windows.Forms.Button();
-            this.btnDSBaoCao = new System.Windows.Forms.Button();
-            this.panelContainer = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmQuanLyBaoCao));
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dgvDSBaoCao = new System.Windows.Forms.DataGridView();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.btnInBaoCao = new System.Windows.Forms.Button();
+            this.time = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnLamMoi = new System.Windows.Forms.Button();
+            this.btnLoc = new System.Windows.Forms.Button();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSBaoCao)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // groupBox1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.btnXuatBaoCao);
-            this.panel1.Controls.Add(this.btnThemMoi);
-            this.panel1.Controls.Add(this.btnDSBaoCao);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(225, 753);
-            this.panel1.TabIndex = 1;
+            this.groupBox1.Controls.Add(this.dgvDSBaoCao);
+            this.groupBox1.Location = new System.Drawing.Point(13, 178);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(975, 509);
+            this.groupBox1.TabIndex = 6;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Dữ liệu báo cáo doanh thu";
             // 
-            // btnXuatBaoCao
+            // dgvDSBaoCao
             // 
-            this.btnXuatBaoCao.Image = global::QuanLyBaoCao.Properties.Resources.export;
-            this.btnXuatBaoCao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXuatBaoCao.Location = new System.Drawing.Point(12, 150);
-            this.btnXuatBaoCao.Name = "btnXuatBaoCao";
-            this.btnXuatBaoCao.Size = new System.Drawing.Size(200, 40);
-            this.btnXuatBaoCao.TabIndex = 0;
-            this.btnXuatBaoCao.Text = "Xuất báo cáo";
-            this.btnXuatBaoCao.UseVisualStyleBackColor = true;
-            this.btnXuatBaoCao.Click += new System.EventHandler(this.btnXuatBaoCao_Click);
+            this.dgvDSBaoCao.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDSBaoCao.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDSBaoCao.Location = new System.Drawing.Point(7, 27);
+            this.dgvDSBaoCao.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dgvDSBaoCao.Name = "dgvDSBaoCao";
+            this.dgvDSBaoCao.ReadOnly = true;
+            this.dgvDSBaoCao.RowHeadersWidth = 51;
+            this.dgvDSBaoCao.RowTemplate.Height = 24;
+            this.dgvDSBaoCao.Size = new System.Drawing.Size(961, 474);
+            this.dgvDSBaoCao.TabIndex = 1;
             // 
-            // btnThemMoi
+            // printDocument1
             // 
-            this.btnThemMoi.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnThemMoi.Image = global::QuanLyBaoCao.Properties.Resources.more;
-            this.btnThemMoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThemMoi.Location = new System.Drawing.Point(12, 81);
-            this.btnThemMoi.Name = "btnThemMoi";
-            this.btnThemMoi.Size = new System.Drawing.Size(200, 40);
-            this.btnThemMoi.TabIndex = 0;
-            this.btnThemMoi.Text = "Thêm báo cáo mới";
-            this.btnThemMoi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnThemMoi.UseVisualStyleBackColor = true;
-            this.btnThemMoi.Click += new System.EventHandler(this.btnThemMoi_Click);
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
-            // btnDSBaoCao
+            // printPreviewDialog1
             // 
-            this.btnDSBaoCao.Image = global::QuanLyBaoCao.Properties.Resources.checklist;
-            this.btnDSBaoCao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDSBaoCao.Location = new System.Drawing.Point(12, 12);
-            this.btnDSBaoCao.Name = "btnDSBaoCao";
-            this.btnDSBaoCao.Size = new System.Drawing.Size(200, 40);
-            this.btnDSBaoCao.TabIndex = 0;
-            this.btnDSBaoCao.Text = "Danh sách báo cáo";
-            this.btnDSBaoCao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDSBaoCao.UseVisualStyleBackColor = true;
-            this.btnDSBaoCao.Click += new System.EventHandler(this.btnDSBaoCao_Click);
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            //this.printPreviewDialog1.Load += new System.EventHandler(this.printPreviewDialog1_Load);
             // 
-            // panelContainer
+            // btnInBaoCao
             // 
-            this.panelContainer.BackColor = System.Drawing.Color.Transparent;
-            this.panelContainer.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelContainer.Location = new System.Drawing.Point(250, 0);
-            this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(750, 753);
-            this.panelContainer.TabIndex = 2;
+            this.btnInBaoCao.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnInBaoCao.Image = global::QuanLyBaoCao.Properties.Resources.printer;
+            this.btnInBaoCao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInBaoCao.Location = new System.Drawing.Point(921, 704);
+            this.btnInBaoCao.Name = "btnInBaoCao";
+            this.btnInBaoCao.Size = new System.Drawing.Size(67, 40);
+            this.btnInBaoCao.TabIndex = 4;
+            this.btnInBaoCao.Text = "In";
+            this.btnInBaoCao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnInBaoCao.UseVisualStyleBackColor = true;
+            this.btnInBaoCao.Click += new System.EventHandler(this.btnInBaoCao_Click);
+            // 
+            // time
+            // 
+            this.time.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.time.Location = new System.Drawing.Point(23, 78);
+            this.time.Name = "time";
+            this.time.Size = new System.Drawing.Size(132, 26);
+            this.time.TabIndex = 8;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(20, 44);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(91, 21);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Thời gian";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.time);
+            this.groupBox2.Controls.Add(this.btnLamMoi);
+            this.groupBox2.Controls.Add(this.btnLoc);
+            this.groupBox2.Location = new System.Drawing.Point(13, 14);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(404, 141);
+            this.groupBox2.TabIndex = 9;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Lọc dữ liệu";
+            // 
+            // btnLamMoi
+            // 
+            this.btnLamMoi.BackColor = System.Drawing.Color.White;
+            this.btnLamMoi.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnLamMoi.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnLamMoi.Image = global::QuanLyBaoCao.Properties.Resources.reload;
+            this.btnLamMoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLamMoi.Location = new System.Drawing.Point(278, 71);
+            this.btnLamMoi.Name = "btnLamMoi";
+            this.btnLamMoi.Size = new System.Drawing.Size(108, 40);
+            this.btnLamMoi.TabIndex = 2;
+            this.btnLamMoi.Text = "Làm mới";
+            this.btnLamMoi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLamMoi.UseVisualStyleBackColor = false;
+            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
+            // 
+            // btnLoc
+            // 
+            this.btnLoc.BackColor = System.Drawing.Color.White;
+            this.btnLoc.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnLoc.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnLoc.Image = global::QuanLyBaoCao.Properties.Resources.filter;
+            this.btnLoc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLoc.Location = new System.Drawing.Point(191, 71);
+            this.btnLoc.Name = "btnLoc";
+            this.btnLoc.Size = new System.Drawing.Size(69, 40);
+            this.btnLoc.TabIndex = 2;
+            this.btnLoc.Text = "Lọc";
+            this.btnLoc.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLoc.UseVisualStyleBackColor = false;
+            this.btnLoc.Click += new System.EventHandler(this.btnLoc_Click);
             // 
             // FrmQuanLyBaoCao
             // 
@@ -104,30 +164,35 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1000, 753);
-            this.Controls.Add(this.panelContainer);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(1000, 761);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.btnInBaoCao);
+            this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "FrmQuanLyBaoCao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Quản lý báo cáo";
-            this.Load += new System.EventHandler(this.FrmQuanLyBaoCao_Load);
-            this.panel1.ResumeLayout(false);
+            this.Text = "DanhSachBaoCao";
+            this.Load += new System.EventHandler(this.FrmDanhSachBaoCao_Load);
+            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSBaoCao)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnDSBaoCao;
-        private System.Windows.Forms.Button btnThemMoi;
-        private System.Windows.Forms.Panel panelContainer;
-        private System.Windows.Forms.Button btnXuatBaoCao;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DataGridView dgvDSBaoCao;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Windows.Forms.Button btnInBaoCao;
+        private System.Windows.Forms.DateTimePicker time;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button btnLoc;
+        private System.Windows.Forms.Button btnLamMoi;
     }
 }
-

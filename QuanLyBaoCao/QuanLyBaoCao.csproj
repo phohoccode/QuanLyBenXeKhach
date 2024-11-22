@@ -163,18 +163,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connection.cs" />
-    <Compile Include="FrmDanhSachBaoCao.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmDanhSachBaoCao.Designer.cs">
-      <DependentUpon>FrmDanhSachBaoCao.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmInBaoCao.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmInBaoCao.Designer.cs">
-      <DependentUpon>FrmInBaoCao.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmQuanLyBaoCao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,18 +171,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="FrmTaoBaoCao.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmTaoBaoCao.Designer.cs">
-      <DependentUpon>FrmTaoBaoCao.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="FrmDanhSachBaoCao.resx">
-      <DependentUpon>FrmDanhSachBaoCao.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmInBaoCao.resx">
-      <DependentUpon>FrmInBaoCao.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmQuanLyBaoCao.resx">
       <DependentUpon>FrmQuanLyBaoCao.cs</DependentUpon>
     </EmbeddedResource>
@@ -208,9 +184,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="FrmTaoBaoCao.resx">
-      <DependentUpon>FrmTaoBaoCao.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
